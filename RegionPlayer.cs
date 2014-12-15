@@ -151,7 +151,7 @@ namespace RegionFlags
                 player.TPlayer.hostile = false;
                 player.SendData(PacketTypes.TogglePvp);
                 NetMessage.SendData((int)PacketTypes.TogglePvp, -1, -1, "", player.Index);
-                player.SendMessage("PVP free area left, pvp disabled.", Color.Green);
+                player.SendMessage("PVP free area left, pvp enabled.", Color.Green);
             }
 
             if ((now - lastUpdate).TotalSeconds > 1)
