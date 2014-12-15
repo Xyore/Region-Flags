@@ -103,7 +103,7 @@ namespace RegionFlags
                             player.SendMessage("PVP free area entered, pvp disabled.", Color.Green);
                         }
 
-                        player.TPlayer.hostile = false;
+                        player.TPlayer.hostile = true;
                         player.SendData(PacketTypes.TogglePvp);
                         NetMessage.SendData((int)PacketTypes.TogglePvp, -1, -1, "", player.Index);
                         inNoPVPZone = true;
